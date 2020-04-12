@@ -1,8 +1,8 @@
-import React, {useState} from 'react';
-import MapGL, {Marker, NavigationControl} from "react-map-gl"
+import React, { useState } from 'react';
+import MapGL, { Marker, NavigationControl } from "react-map-gl"
 import Pin from './Pin';
 import './map.css';
-import Form, {GroupItem} from "devextreme-react/form";
+import Form, { GroupItem } from "devextreme-react/form";
 import '../new_register.css'
 
 const geolocateStyle = {
@@ -14,7 +14,7 @@ const geolocateStyle = {
 
 function MapNewRegister(props) {
 
-    const {lat, lng} = props;
+    const { lat, lng } = props;
 
     const initialState = {
         latitude: lat,
@@ -49,18 +49,18 @@ function MapNewRegister(props) {
     // Detect location users
     navigator.geolocation.getCurrentPosition(position => {
 
-            // Deserealize object
-            const {latitude, longitude} = position.coords;
+        // Deserealize object
+        const { latitude, longitude } = position.coords;
 
-            // Set viewPort detected
-            setViewport({
-                ...viewport, //Copy others atributes not modifies
-                latitude,
-                longitude,
-            });
-            // Set market with position detected
-            setMarker({latitude, longitude});
-        },
+        // Set viewPort detected
+        setViewport({
+            ...viewport, //Copy others atributes not modifies
+            latitude,
+            longitude,
+        });
+        // Set market with position detected
+        setMarker({ latitude, longitude });
+    },
         error, options
     );
 
@@ -71,9 +71,9 @@ function MapNewRegister(props) {
     };
 
     return (
-        <div className={'map-newregister-container'}>
+        <div style={styles.map}>
             <Form>
-                <GroupItem caption={'Ubicacion'}>
+                <GroupItem caption={'Ubicación'}>
                     <MapGL
                         {...viewport}
                         mapStyle="mapbox://styles/mapbox/dark-v10"
@@ -89,15 +89,15 @@ function MapNewRegister(props) {
                             draggable
                             //onDragStart={this._onMarkerDragStart}
                             //onDrag={this._onMarkerDrag}
-                            onDragEnd={(event) => onDragEnd({latitude: event.lngLat[1], longitude: event.lngLat[0]})}
+                            onDragEnd={(event) => onDragEnd({ latitude: event.lngLat[1], longitude: event.lngLat[0] })}
                         >
-                            <Pin size={40}/>
+                            <Pin size={40} />
 
                         </Marker>
 
                         <div className="nav" style={geolocateStyle}>
                             <NavigationControl
-                                //onViewportChange={this._updateViewport}
+                            //onViewportChange={this._updateViewport}
                             />
                         </div>
                     </MapGL>
@@ -107,5 +107,15 @@ function MapNewRegister(props) {
     );
 
 }
+
+const styles = {
+    map: {
+        height: '100%',
+        width: '100%',
+        display: 'flex',
+        'justify-content': 'center',
+        'align-items': 'center'
+    }
+};
 
 export default MapNewRegister;
