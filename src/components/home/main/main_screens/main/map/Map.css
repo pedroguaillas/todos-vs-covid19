@@ -1,0 +1,107 @@
+.cluster-marker {
+    color: #fff;
+    border-radius: 50%;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.crime-marker,
+.user-marker {
+    background: none;
+    border: none;
+}
+
+.crime-marker img,
+.user-marker img {
+    width: 25px;
+}
+
+.circle {
+    z-index: 1;
+    width: 30px;
+    height: 30px;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+}
+
+.circulo1 {
+    background: #fbff01;
+}
+
+.circulo2 {
+    background: #ff6e08;
+}
+
+.circulo3 {
+    background: #ff0808;
+}
+
+.circulo4 {
+    background: #0e3ff3;
+}
+
+.circulo5 {
+    background: #000000;
+}
+
+.control-panel {
+    position: absolute;
+    top: 0;
+    right: 0;
+    max-width: 320px;
+    background: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    padding: 12px 24px;
+    margin: 20px;
+    font-size: 13px;
+    line-height: 2;
+    color: #6b6b76;
+    text-transform: uppercase;
+    outline: none;
+}
+
+.popup {
+    padding: 20px;
+    background: #fff;
+    border-radius: 5px;
+    width: 30%;
+    position: relative;
+    transition: all 5s ease-in-out;
+}
+
+.popup h2 {
+    margin-top: 0;
+    color: #333;
+    font-family: Tahoma, Arial, sans-serif;
+}
+
+.popup .content {
+    max-height: 30%;
+    overflow: auto;
+}
+
+.customers {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.customers td,
+.customers th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+.customers tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.customers th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    color: white;
+}

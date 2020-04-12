@@ -9,6 +9,11 @@ export const symptoms = {
     diarrea: false,
     dolores_musculares: false,
     dificultad_para_respirar_ahogo: false,
+    debilidad_corporal: false,
+    neumonia: false,
+    fatiga: false,
+    traspiracion: false,
+    baja_temperatura: false
 };
 
 export const symptoms_another_patient = {
@@ -22,6 +27,11 @@ export const symptoms_another_patient = {
     diarrea: false,
     dolores_musculares: false,
     dificultad_para_respirar_ahogo: false,
+    debilidad_corporal: false,
+    neumonia: false,
+    fatiga: false,
+    traspiracion: false,
+    baja_temperatura: false,
 
     cedula: '',
     nombres: '',
